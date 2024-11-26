@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Hub LK</title>
+    <link rel="icon" type="image/png" href="images/logo.png">
+
+
+    <!-- Link to Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Merienda+One&family=Poppins&family=Sansita:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- AOS CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <!-- AOS JS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+<style>
+    * {
+        text-transform: capitalize;
+    }
+</style>
+
+</head>
+<body>
+    <!-- Second Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark second-navbar">
+            <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#bottomNavbar"
+                aria-controls="bottomNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="bottomNavbar">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0 d-flex justify-content-center align-items-center">
+                    <li class="nav-item d-flex justify-content-center align-items-center">
+                        <img src="Images/logo.png" alt="Logo" width="60" height="60" class="m-1 mx-2">
+                        <span style="color: #fff; font-size: 30px; margin-right: 180px;">Business Hub LK</span>                    
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#service">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-info" type="button" onclick="openLoginModal()"><i class="fas fa-user"></i> Login</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-info mx-3" type="button" onclick="openModalRegistration()">Register</button>
+                    </li>
+                </ul>
+            </div>
+    </nav>
+
+
+    <!-- Login Model -->
+    <div id="myLogModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content w-50 ">
+            <span class="close" onclick="closeLoginModal()">&times;</span>
+            <div class="row justify-content-center p-5">
+                    <div class="card">
+                        <div class="card-header text-center">
+                            <h4>Login</h4>
+                        </div>
+                        <div class="card-body">
+                            <form>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email address</label>
+                                    <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="password" class="form-label">Password</label>
+                                    <input type="password" class="form-control" id="password" placeholder="Enter your password" required>
+                                </div>
+                                <div class="mb-3 form-check">
+                                    <input type="checkbox" class="form-check-input" id="rememberMe">
+                                    <label class="form-check-label" for="rememberMe">Remember me</label>
+                                </div>
+                                <button type="submit" class="btn btn-primary w-100">Login</button>
+                            </form>
+                        </div>
+                        <div class="card-footer text-center">
+                            <a href="#" class="text-decoration-none">Forgot your password?</a>
+                        </div>
+                    </div>
+               
+            </div>
+        </div>  
+    </div>
+
+     <!-- Login Model -->
+     <div id="myRegModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content w-50 ">
+            <span class="close" onclick="closeModalRegistration()">&times;</span>
+            <div class="row justify-content-center p-5">
+                    <div class="card">
+                        <div class="card-header text-center">
+                            <h4>Register</h4>
+                        </div>
+                        <div class="card-body">
+                            <form>
+                                <div class="form-group mb-4">
+                                    <label for="firstname">First Name</label>
+                                    <input type="text" class="form-control" id="firstname" name="firstname" placeholder="Enter your first name" required>
+                                </div>
+                                <div class="form-group mb-4">
+                                    <label for="lastname">Last Name</label>
+                                    <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Enter your Last name" required>
+                                </div>
+                                <div class="form-group mb-4">
+                                    <label for="age">Age</label>
+                                    <input type="number" class="form-control" id="age" name="age" placeholder="Enter your age" required>
+                                </div>
+                                <div class="form-group mb-4">
+                                    <label for="email">Email Address</label>
+                                    <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
+                                </div>
+                                <div class="form-group mb-4">
+                                    <label for="phone">Phone Number</label>
+                                    <input type="tel" class="form-control" id="phone" name="phone" placeholder="Enter your phone number" required>
+                                </div>
+                                <!-- login Dtails -->
+                                <div class="form-group mb-4">
+                                    <label for="username">User Name</label>
+                                    <input type="text" class="form-control" id="username" name="username" placeholder="Enter your user name" required>
+                                </div>
+                                <div class="form-group mb-4">
+                                    <label for="password">Password</label>
+                                    <input type="password" class="form-control" id="password" name="password" placeholder="Enter your password" required>
+                                </div>
+
+                                <!-- Agreement Checkbox and Submit Button -->
+                                <div class="form-group form-check mb-4">
+                                    <input type="checkbox" class="form-check-input" id="terms" required>
+                                    <label class="form-check-label" for="terms">I agree to the terms and conditions</label>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Register</button>                            
+                            </form>
+                        </div>
+                       
+                    </div>
+               
+            </div>
+        </div>  
+    </div>
+
+
+    <!-- Hero Section -->
+    <section class="hero-section" data-aos="fade-up">
+        <div class="container">
+            <div class="row">
+                <div class="hero-top">
+                    <p>Empowering Your Vision, Transforming Ideas Into Reality</p>
+                </div>
+
+                <div class="hero-form col-md-8 mx-auto">
+                    <form class="mt-3">
+                        <!-- Input Group with Search Icon Inside Input Field -->
+                        <div class="input-group">
+                            <input type="search" class="form-control" placeholder="Search for any services..." aria-label="Search">
+                            <span class="input-group-text" id="search-icon"><i class="fa fa-search"></i></span>
+                        </div>
+                    </form>
+                </div>
+                
+            </div>
+        </div>       
+    </section>
+
+
+    <!-- Hero Service Section -->
+<div class="container">
+    <div class="row row-cols-1 row-cols-md-2 row-cols-sm-1 g-4 my-2">
+        <div class="col">
+            <div class="card card-style" data-aos="fade-right">
+                <div class="row hero-service p-4">
+                    <div class="col-md-4 col-sm-4 col-4 d-flex justify-content-center align-items-center img-card p-3">
+                        <img src="Images/cloud-service.png" width="100px" alt="...">
+                    </div>
+                    <div class="col-md-8 col-sm-8 col-8">
+                        <h5 class="card-title">Lorem Ipsum Dolor</h5>
+                        <p class="card-text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel neque nec arcu dictum aliquet."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card card-style" data-aos="fade-left">
+                <div class="row hero-service p-4">
+                    <div class="col-md-4 col-sm-4 col-4 d-flex justify-content-center align-items-center img-card p-3">
+                        <img src="Images/services.png" width="100px" alt="...">
+                    </div>
+                    <div class="col-md-8 col-sm-8 col-8">
+                        <h5 class="card-title">Consectetur Adipiscing</h5>
+                        <p class="card-text">"Nulla facilisi. Ut convallis lectus vel ligula aliquet, nec viverra turpis cursus. Pellentesque vehicula."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+   <!-- About Section -->
+<div class="container" id="about">
+    <div class="main-title d-flex flex-column align-items-center">
+        <h1>WHO WE ARE</h1>
+        <hr class="custom-hr">
+    </div>
+    <div class="row row-cols-1 row-cols-md-2 g-4 d-flex justify-content-center align-items-center mb-5">
+        <div class="col">
+            <div class="card" style="border: none;" data-aos="fade-right">
+                <div class="card-body">
+                    <img src="Images/about-1.jpg" class="" alt="about image" width="100%" style="border-radius: 20px; box-shadow: 10px 50px 100px rgba(42, 194, 37, 0.288);">
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card service-card-s p-3" data-aos="fade-left">
+                <div class="card-body">
+                    <p class="card-text text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, metus a vestibulum fermentum, 
+                        felis neque pretium justo, sit amet tempus lorem libero vel libero.</p>
+                    <p class="card-text text-justify">Praesent varius magna a lorem pharetra, sit amet congue elit vulputate. Integer malesuada felis vitae 
+                        massa tristique, vel sollicitudin justo tempor. Nunc ut tellus auctor, aliquam magna et, tempor justo.</p>
+                        <p class="card-text text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, metus a vestibulum fermentum, 
+                            felis neque pretium justo, sit amet tempus lorem libero vel libero.</p>
+                        <p class="card-text text-justify">Praesent varius magna a lorem pharetra, sit amet congue elit vulputate. Integer malesuada felis vitae 
+                            massa tristique, vel sollicitudin justo tempor. Nunc ut tellus auctor, aliquam magna et, tempor justo.</p>
+             
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row row-cols-1 row-cols-md-2 g-4 d-flex justify-content-center align-items-center">
+        <div class="col order-md-2">
+            <div class="card" style="border: none;" data-aos="fade-left">
+                <div class="card-body">
+                    <img src="Images/about-2.jpg" class="" alt="about image" width="100%" style="border-radius: 20px; box-shadow: 10px -50px 100px rgba(42, 194, 37, 0.288);">
+                </div>
+            </div>
+        </div>
+        <div class="col order-md-1">
+            <div class="card service-card-s p-3" data-aos="fade-right">
+                <div class="card-body">
+                    <p class="card-text text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac libero eu libero pellentesque vehicula. 
+                        Nulla facilisi. Morbi vel nulla at felis accumsan aliquet.</p>
+                    <p class="card-text text-justify">Suspendisse potenti. Mauris consequat tortor ac eros tristique, ut venenatis justo viverra. 
+                        Curabitur fermentum volutpat augue, vel gravida arcu mollis sit amet.</p>
+                    <p class="card-text text-justify">Quisque gravida metus et eros efficitur facilisis. Proin eget arcu ut augue ultricies auctor a sit amet risus. 
+                        Fusce pharetra, ex in tincidunt pharetra, lacus lacus laoreet lorem, at pulvinar enim ligula sed urna.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+  <!-- Service Section -->
+<div class="container" id="service">
+    <div class="service-section my-5" data-aos="fade-up">
+        <div class="main-title d-flex flex-column align-items-center">
+            <h1>OUR SERVICES</h1>
+            <hr class="custom-hr">
+        </div>
+
+        <div class="row row-cols-md-1 row-cols-sm-1 row-cols-1 my-5 g-4">
+            <div class="col-md-8 col-sm-12 card p-4 service-card-f" data-aos="fade-up">
+                <div class="row service">
+                    <div class="col-md-4 col-sm-4 col-4 d-flex justify-content-center align-items-center img-card-service p-3">
+                        <img src="Images/full-service.png" width="100px" alt="...">
+                    </div>
+                    <div class="col-md-8 col-sm-8 col-8">
+                        <h5 class="card-title">Lorem ipsum dolor</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet facilisis velit. 
+                            Integer nec eros nec purus auctor convallis vel a enim. Curabitur non tortor id magna fringilla varius.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8 col-sm-12 ms-auto p-4 card service-card service-card-s" data-aos="fade-up">
+                <div class="row service">
+                    <div class="col-md-4 col-sm-4 col-4 d-flex justify-content-center align-items-center img-card-service p-3">
+                        <img src="Images/call-center.png" width="100px" alt="...">
+                    </div>
+                    <div class="col-md-8 col-sm-8 col-8">
+                        <h5 class="card-title">Lorem ipsum dolor</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent at malesuada neque. 
+                            Nulla facilisi. Vivamus et mauris ac arcu lacinia dictum vel id sapien.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-8 col-sm-12 card p-4 service-card-f" data-aos="fade-up">
+                <div class="row service">
+                    <div class="col-md-4 col-sm-4 col-4 d-flex justify-content-center align-items-center img-card-service p-3">
+                        <img src="Images/service.png" width="100px" alt="...">
+                    </div>
+                    <div class="col-md-8 col-sm-8 col-8">
+                        <h5 class="card-title">Job Opportunities from Various Companies</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dictum metus vel risus hendrerit, 
+                            a sagittis metus congue. Pellentesque vitae urna at tortor tristique eleifend.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--Contact Section -->
+
+<div class="container">
+    <div class="contact-section my-5" data-aos="fade-up" id="contact">
+        <div class="main-title d-flex flex-column align-items-center">
+            <h1>Contacts</h1>
+            <hr class="custom-hr">
+        </div>
+        <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126743.58638744405!2d79.7738030325544!3d6.922001981332362!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae253d10f7a7003%3A0x320b2e4d32d3838d!2sColombo!5e0!3m2!1sen!2slk!4v1725963563485!5m2!1sen!2slk" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+
+        <div class="row mt-5">
+            <div class="col-md-6 col-sm-12 col-12">
+                <div class="row mb-3">
+                    <div class="col-md-2 col-sm-4 col-4">
+                        <i class="fa-solid fa-phone" style="font-size: 30px; padding: 16px; background: #C0EBA6; border-radius: 5px;"></i>
+                    </div>
+                    <div class="col-md-8 col-sm-8 col-8">
+                        <h5 class="card-title">Call Us</h5>
+                        <p class="card-text">+94 7* *** ****</p>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-md-2 col-sm-4 col-4">
+                        <i class="fa-solid fa-envelope"  style="font-size: 30px; padding: 16px; background: #C0EBA6; border-radius: 5px;"></i>
+                    </div>
+                    <div class="col-md-8 col-sm-8 col-8">
+                        <h5 class="card-title">Email Us</h5>
+                        <p class="card-text">support@Business Hub LK.lk</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-12 col-12">
+                <div class="card mb-2" style="border: none;">
+                    <form action="">
+                        <div class="row mb-3">
+                            <div class="col-md-6 mb-3">
+                                <input type="text" class="form-control" id="name" name="name" placeholder="Your Name">
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <input type="email" class="form-control" id="email" name="email" placeholder="Your Email">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-md-12">
+                                <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-md-12">
+                                <textarea class="form-control" id="message" rows="3" placeholder="Message"></textarea>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="footer mt-5 foot-top">
+    <div class="container">
+        <div class="row row-cols-1 row-cols-md-3 row-cols-sm-1 text-center text-md-start align-items-center">
+            <div class="col mb-3 mb-md-0">
+                <img src="images/logo.png" width="100px" alt="Logo" class="mt-5">
+                <span style="color: #fff; font-size: 30px;">Business Hub LK</span>                    
+            </div>
+            <div class="col mb-3 mb-md-0">
+                <ul class="footer-menu list-unstyled align-items-center justify-content-center justify-content-md-start mb-0">
+                    <li class="me-md-3">Home</li>
+                    <li class="me-md-3">About</li>
+                    <li class="me-md-3">Services</li>
+                    <li class="me-md-3">Contact</li>
+                    <li>Register</li>
+                </ul>
+            </div>
+            <div class="col">
+                <h4 class="mb-3 footer-head">Follow Us</h4>
+                <div class="social-icons d-flex justify-content-center">
+                    <a href="#" class="mx-2"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="mx-2"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="mx-2"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="mx-2"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="foot-bottom text-center mt-4  text-white ">
+        <p>&copy; 2024 businesshub.lk. All rights reserved.</p>
+    </div>
+</footer>
+
+
+ <!-- Up arrow button that displays when scrolling -->
+<button onclick="scrollToTop()" id="scrollToTopBtn" class="scroll-to-top">
+    <i class="fa fa-arrow-up"></i>
+</button>
+
+
+<!-- AOS JS -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        AOS.init({
+            duration: 1000, // Duration of the animation in milliseconds
+            easing: 'ease-in-out', // Easing function for the animation
+            once: true, // Whether animation should happen only once
+        });
+    });
+
+     // Function to open the Registration modal
+     function openModalRegistration() {
+        document.getElementById("myRegModal").style.display = "block";
+    }
+
+    // Function to close the Registration modal
+    function closeModalRegistration() {
+        document.getElementById("myRegModal").style.display = "none";
+    }
+
+    // Function to open the Insurance modal
+    function openModalInsurance() {
+        document.getElementById("myInsuranceModal").style.display = "block";
+    }
+
+    // Function to close the Insurance modal
+    function closeModalInsurance() {
+        document.getElementById("myInsuranceModal").style.display = "none";
+    }
+
+    // Combined window.onclick function for closing both modals when clicking outside
+    window.onclick = function(event) {
+        var regModal = document.getElementById("myRegModal");
+        var insModal = document.getElementById("myInsuranceModal");
+
+        if (event.target == regModal) {
+            regModal.style.display = "none";
+        } else if (event.target == insModal) {
+            insModal.style.display = "none";
+        }
+    }
+
+     // Function to open the login modal
+     function openLoginModal() {
+        document.getElementById("myLogModal").style.display = "block";
+    }
+
+    // Function to close the login modal
+    function closeLoginModal() {
+        document.getElementById("myLogModal").style.display = "none";
+    }
+
+
+
+
+// Show the button when the user scrolls down 100px from the top
+window.onscroll = function() {
+    scrollFunction();
+};
+
+function scrollFunction() {
+    var scrollBtn = document.getElementById("scrollToTopBtn");
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        scrollBtn.style.display = "block";
+    } else {
+        scrollBtn.style.display = "none";
+    }
+}
+
+// Scroll to the top of the page when the button is clicked
+function scrollToTop() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
+}
+</script>
+    
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js" integrity="sha512-ykZ1QQr0Jy/4ZkvKuqWn4iF3lqPZyij9iRv6sGqLRdTPkY69YX6+7wvVGmsdBbiIfN/8OdsI7HABjvEok6ZopQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<!-- AOS JS -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+<!-- AOS JS -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+<!-- SweetAlert2 CDN -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script></body>
+
+<!-- Javascript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+</html>
