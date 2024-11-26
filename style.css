@@ -1,0 +1,652 @@
+/* Define CSS Variables for colors */
+:root {
+    --primary-color: #347928;
+    --secondary-color: #C0EBA6;
+    --font-family: 'Poppins', sans-serif;
+}
+* {
+    text-transform: capitalize;
+}
+ 
+/* General Styling */
+body {
+    font-family: var(--font-family);
+}
+
+/* Top Navbar Styling */
+.top-nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.top-navbar {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+.top-navbar .navbar-brand span {
+    font-size: 24px; /* 1.5rem to px */
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+/* Customizing the input group */
+.input-group{
+    border-radius: 10px 0 0 10px; /* Rounded left corners */
+    border:1px solid #8af59c;
+    border-radius: 10px;
+
+}
+.input-group .form-control {
+    border-radius: 10px 0 0 10px; /* Rounded left corners */
+    border:none;
+    background-color: #f6fbfe;
+    height:70px;
+}
+
+.input-group .input-group-text {
+    background-color: #F6FBFE;
+    border: none; /* Removes border from the icon container */
+    border-radius: 0 10px 10px 0; /* Rounded right corners */
+    color: var(--primary-color); /* Matches your theme color */
+    text-align: center;
+}
+
+.top-navbar .btn-outline-primary {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+    border-radius: 10px;
+    padding: 7px 25px;
+}
+
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: #fff;
+    border-radius: 10px;
+    padding: 7px 25px;
+}
+
+.btn-info {
+    background-color: #fff;
+    border-color: var(--secondary-color);
+    color:  var(--primary-color);
+    border-radius: 10px;
+    padding: 7px 25px;
+}
+
+.btn-info:hover {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    color:  var(--primary-color);
+    border-radius: 10px;
+    padding: 7px 25px;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+} 
+
+.btn-primary i {
+    margin-right: 5px;
+}
+
+
+
+
+/* Responsive adjustments using media queries */
+@media (max-width: 994px) { /* Adjust for tablets and smaller screens */
+    .top-navbar .btn-primary {
+        background-color: var(--primary-color);
+        border-color: var(--primary-color);
+        color: #fff;
+        border-radius: 10px;
+        padding: 7px 25px;
+    }
+}
+
+
+/* Second Navbar Styling */
+.second-navbar {
+    background-color: var(--primary-color);
+}
+
+.second-navbar .navbar-nav .nav-link {
+    color: #FFFFFF;
+    font-weight: 500;
+    font-size:18px;
+    margin-right: 52px; /* 2rem to px */
+}
+
+.second-navbar .navbar-nav .nav-link:hover,
+.second-navbar .navbar-nav .nav-link.active {
+    color: var(--secondary-color);
+}
+
+.hero-section {
+    background-image: linear-gradient(180deg,
+        rgba(211, 243, 211, 0.74),  /* Transparent blue */
+        rgba(255, 255, 255, 0.829), 
+        rgba(255, 255, 255, 0.774),  /* Light blue */
+        rgba(53, 247, 127, 0.315),  /* Light blue */
+        rgba(3, 73, 18, 0.541)  /* Dark blue */
+        ),
+        url('Images/cover.png'); /* Optional: Update background image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 80vh; /* Adjust height for better content fit */
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center;
+    justify-content: center;
+    text-align: center; /* Center text */
+    color: #fff;
+    padding: 20px; /* Add padding for better spacing */
+
+}
+
+.hero-top{
+    /* font-family: 'Merienda One', sans-serif; Set font family */
+    font-size: 58px; /* Set font size */
+    font-weight:800px;
+    color: rgb(13, 61, 1); /* Make inside of the text transparent */
+    text-shadow: -2px -2px 0 var(--primary-color), 2px -2px 0 var(--secondary-color), -2px 2px 0 var(--secondary-color), 2px 2px 0 var(--secondary-color); /* Secondary color for stroke effect */
+
+}
+
+
+.gig-hero-section{
+        background-image: linear-gradient(180deg,
+        rgba(211, 243, 211, 0.74),  /* Transparent blue */
+        rgba(255, 255, 255, 0.829), 
+        rgba(255, 255, 255, 0.774),  /* Light blue */
+        rgba(53, 247, 127, 0.315),  /* Light blue */
+        rgba(3, 73, 18, 0.541)  /* Dark blue */
+        ),
+        url('Images/cover1.jpg'); /* Optional: Update background image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 50vh; /* Adjust height for better content fit */
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center;
+    justify-content: center;
+    text-align: center; /* Center text */
+    color: #fff;
+    padding: 20px; /* Add padding for better spacing */
+    box-shadow: 100px 0px 200px rgba(42, 194, 37, 0.578) ; /* Adjust values for shadow effect */
+}
+.hero-bottom h1{
+    font-family: 'Sansita', sans-serif;
+    color: rgb(13, 61, 1); /* Make inside of the text transparent */
+    font-size: 68px;
+    text-shadow: -2px -2px 0 var(--secondary-color), 2px -2px 0 var(--secondary-color), -2px 2px 0 var(--secondary-color), 2px 2px 0 var(--secondary-color); /* Secondary color for stroke effect */
+
+}
+
+
+
+
+
+/* Media Query for max-width 950px */
+@media (max-width: 995px) {
+    
+    }
+
+   
+
+
+/* Hero Service Section */
+.hero-service{
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    flex-wrap: wrap;
+
+}
+.card-style{
+    border: none;
+    background-color: #fcfcfc5e;
+}
+
+.card-title {
+    font-weight: 700;
+    font-size: 19px !important; /* 1.2rem to px */
+    color: var(--primary-color);
+}
+
+.card-text {
+    color: #4E4E50;
+}
+
+
+/* About Section */
+.main-title {
+    margin: 70px 0px;
+}
+
+.custom-hr {
+    width: 10%; /* Adjust this width as needed */
+    border: #078035; /* Remove default border */
+    border-top: 5px solid #078035; /* Add a custom border to control height */
+    margin-top: 8px; /* 0.5rem to px */
+}
+
+.main-title h1 {
+    color: var(--primary-color) !important; /* Primary font color */
+    font-weight: 700;
+    font-size: 48px; /* 3rem to px */
+}
+
+.about-content p {
+    color: #4E4E50 !important; /* Primary font color */
+}
+
+
+
+/* Service section */
+.service{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.service-card-s, .service-card-f{
+    border: none;
+    background-color: #ecf7e552;    
+    box-shadow: 0 7px 10px rgba(0, 0, 0, 0.1); /* Horizontal offset, vertical offset, blur radius, and color */
+    margin-bottom: 50px;
+}
+
+
+
+/* Footer Section */
+
+.foot-top{
+    background-color: var(--secondary-color);
+    margin-top: 50px!important;
+
+}
+.foot-bottom{
+    background-color: var(--primary-color);
+    padding-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.footer ul {
+    padding: 0;
+    margin-top: 30px;
+    list-style: none; /* Removes default bullet points */
+    display: flex;
+    flex-direction: row; /* Stacks items vertically by default */
+    gap: 10px; /* Adds space between list items */
+    color: var(--primary-color) !important;
+}
+
+/* Responsive styling for the footer */
+@media (max-width: 1365px) {
+    .footer ul {
+        flex-direction: column; /* Changes to horizontal layout for larger screens */
+        justify-content: center; /* Centers items horizontally */
+        gap: 15px; /* Adjusts spacing between items */
+    }
+}
+
+
+
+.footer-head{
+    color: var(--primary-color);
+    font-weight: 700;
+}
+/* Style for social icons */
+.footer .social-icons a {
+    color: var(--primary-color);
+    margin: 0 10px;
+    font-size: 24px; /* 1.5rem to px */
+    text-decoration: none!important;
+    background-color: #F6FBFE;
+    padding: 10px 18px;
+    border-radius: 100%;
+    transition: background-color 0.3s, color 0.3s; /* Adds a smooth transition effect */
+}
+
+.footer .social-icons a:hover {
+    color: #f0f0f0;
+    background-color: var(--primary-color);
+}
+
+
+
+
+/* Registration Section */
+
+.reg-section {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 80vh; /* Adjust height for better content fit */
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center;
+    justify-content: center;
+    text-align: center; /* Center text */
+    color: var(--primary-color);
+    padding: 20px; /* Add padding for better spacing */
+}
+
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    border-radius: 15px; /* More rounded corners for a softer look */
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.4), /* Larger shadow for more depth */
+                0 8px 16px rgba(0, 0, 0, 0.3);  /* Enhanced secondary shadow */
+    transform: translateY(-20px); /* More pronounced lift effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%!important; /* Adjust the width based on screen size */
+}
+
+/* Enhanced hover effect for greater 3D illusion */
+.modal-content:hover {
+    transform: translateY(-25px); /* Further lift on hover */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), /* Stronger shadow on hover */
+                0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+}
+
+/* Responsive styling for mobile devices */
+@media (max-width: 485px) {
+    .modal-content {
+        width: 95%!important; /* Almost full width on 360px screens */
+        border-radius: 10px; /* Slightly less rounded corners for compact look */
+        margin: 20% auto; /* Adjust top margin for better centering */
+    }
+
+    .close {
+        font-size: 24px; /* Smaller close button on small screens */
+        top: 5px;
+        right: 10px;
+    }
+}
+
+@media (min-width: 485px) and (max-width: 768px) {
+
+    .modal-content {
+        width: 85%!important;
+        border-radius: 12px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+    .modal-content {
+        width: 80%!important;
+        border-radius: 15px;
+        
+    }
+}
+
+@media (min-width: 992px) {
+    .modal-content {
+        width: 70%!important;
+        border-radius: 20px;
+    }
+}
+
+
+/* Registration */
+
+
+.reg-content {
+    background-color: #fefefe;
+    border-radius: 15px; /* More rounded corners for a softer look */
+    box-shadow: 0 6px 10px rgba(12, 3, 92, 0.4), /* Larger shadow for more depth */
+                0 8px 16px rgba(2, 9, 75, 0.3);  /* Enhanced secondary shadow */
+    transform: translateY(-20px); /* More pronounced lift effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%!important; /* Adjust the width based on screen size */
+}
+
+.reg-title {
+    color: var(--primary-color) !important; /* Primary font color */
+    font-weight: 500;
+    font-size: 45px; /* 3rem to px */
+}
+
+
+/* terms and Conditions */
+
+.con-para{
+    text-align: justify;
+}
+
+
+/* Contact section */
+
+.contact-section i{
+    color: var(--primary-color) !important; /* Primary font color */
+
+}
+
+
+
+
+/******************offer carosel section***************************/
+
+
+.caro-img-card {
+    background-color: var(--secondary-color);
+    border-radius: 50px 0px;
+    padding: 20px;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+} 
+
+.caro-img-card:hover {
+    background-color: rgb(242, 252, 237); /* Changes the background color on hover */
+    transform: scale(1.05); /* Slightly increases the size of the card */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Adds a shadow effect on hover */
+} 
+
+.caro {
+    padding: 80px;
+    border: none!important;
+    border-radius: 10px!important;
+    box-shadow: #3C0753;
+    width: 100%;
+    padding: 40px 150px;
+    background-color: #ecf7e552;
+    box-shadow: 0 7px 10px rgba(0, 0, 0, 0.1); /* Horizontal offset, vertical offset, blur radius, and color */
+    margin-bottom: 50px;
+    position: relative;
+    overflow: visible;
+
+}
+/* Adjust slide button positions */
+.slide-btn {
+    position: absolute;
+    right: 40px; /* Adjust as needed to align on the right side */
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none!important;
+    border-radius: 100%;
+    z-index: 10;
+    cursor: pointer;
+
+}
+
+.slide-l-btn {
+    position: absolute;
+    left: 40px; /* Adjust as needed to align on the left side */
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none!important;
+    z-index: 10;
+    border-radius: 100%;
+    cursor: pointer;
+
+}
+
+/* Disable hover effect */
+.slide-btn:hover, .slide-l-btn:hover {
+    background: transparent;
+    cursor: pointer;
+    border: none!important;
+
+}
+
+/* Disable active state */
+.slide-btn:active, .slide-l-btn:active {
+    background: transparent;
+    box-shadow: none !important;
+    border: none!important;
+
+}
+.text-right i{
+    color:var(--secondary-color);
+    font-size: 30px;
+}
+
+
+
+   /* gig page */
+
+    .carousel-control-prev:hover .carousel-control-prev-icon,
+    .carousel-control-next:hover .carousel-control-next-icon {
+        background-color: rgba(255, 255, 255, 0.911); /* Slightly darker on hover */
+        border-radius: 50%;
+    }
+
+    .gig-section{
+        margin: 100px;
+    }
+
+    .gig .card {
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .gig .card-img-top {
+        object-fit: cover;
+        height: 180px;
+    }
+
+    .gig .top-rated {
+        color: white;
+        font-size: 12px;
+        padding: 3px 8px;
+        border-radius: 5px;
+        margin-left: 10px;
+    }
+
+    .gig .card-body {
+        padding: 10px;
+    }
+
+    .gig .rating {
+        font-size: 30px;
+        color: #f1c40f;
+    }
+
+    .gig .rating span {
+        color: #4d4d4d;
+        font-size: 20px;
+    }
+
+    .gig .price {
+        font-weight: bold;
+        font-size: 20px;
+        margin-top: 10px;
+    }
+
+    .gig .card-footer {
+        background-color: transparent;
+        border: none;
+        padding: 0.5rem 1rem;
+        font-size: 0.85rem;
+    }
+
+    .gig .video-consultation {
+        display: flex;
+        align-items: center;
+    }
+
+    .gig .video-consultation svg {
+        margin-right: 5px;
+    }
+
+    .gig .profile span{
+        font-size: 16px;
+        font-weight: 700;
+    }
+
+
+
+    /* ---------------Scrolling button -------------------- */
+
+
+    
+   
+#scrollToTopBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed position for scrolling */
+    bottom: 20px; /* 20px from the bottom */
+    right: 30px; /* 30px from the right */
+    z-index: 99; /* Make sure it is on top of other content */
+    font-size: 18px; /* Size of the button text */
+    background-color:  var(--secondary-color); /* Black background */
+    color: white; /* White text */
+    border: none; /* Remove borders */
+    padding: 10px 20px; /* Add some padding */
+    border-radius: 10px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+#scrollToTopBtn:hover {
+    background-color:  var(--primary-color); /* Darker background on hover */
+}
